@@ -71,16 +71,28 @@ const statusPoint = computed(() => {
 });
 
 const idolPower = computed(() => {
-  return new Intl.NumberFormat().format(examPlacePoint.value + examScorePoint.value + statusPoint.value);
+  return examPlacePoint.value + examScorePoint.value + statusPoint.value;
+});
+
+const idolPowerFormatted = computed(() => {
+  return new Intl.NumberFormat().format(idolPower.value);
 });
 </script>
 
 <template>
-  <h1 class="text-xl">学マスの数字を計算するやつ</h1>
+  <h1 class="text-xl font-medium">最終プロデュース評価計算機</h1>
 
   <p class="text-sm">中間試験が1位通過ではなかった場合は、評価ポイントがこちらの計算よりも低くなります</p>
 
-  <p class="my-2">最終プロデュース評価<br><span class="text-4xl font-bold">{{ idolPower }}</span>pts.</p>
+  <p class="mt-2">最終プロデュース評価</p>
+
+  <p>
+    <span v-if="idolPower >= 11500" class="text-4xl font-bold text-rose-500 mr-2">A+</span>
+    <span v-else-if="idolPower >= 10000" class="text-4xl font-bold text-rose-500 mr-2">A</span>
+    <span v-else-if="idolPower >= 8500" class="text-4xl font-bold text-amber-500 mr-2">B+</span>
+
+    <span class="text-4xl font-bold">{{ idolPowerFormatted }}</span>pts.
+  </p>
 
   <label class="form-control">
     <div class="label">
