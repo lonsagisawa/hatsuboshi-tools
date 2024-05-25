@@ -14,8 +14,10 @@ useHead({
 </script>
 
 <template>
-  <Header />
-  <main class="p-8">
-    <NuxtPage />
-  </main>
+  <div class="max-w-2xl mx-auto">
+    <Header />
+    <main class="p-8">
+      <NuxtPage />
+    </main>
+  </div>
 </template>
