@@ -1,4 +1,3 @@
 <template>
-    <h1>Hatsuboshi Tools</h1>
-    <NuxtLink to="/power_calculator">最終プロデュース評価計算機</NuxtLink>
+  <NuxtLink to="/power_calculator" class="underline hover:text-orange-500">最終プロデュース評価計算機</NuxtLink>
 </template>
