@@ -78,7 +78,9 @@ const idolPower = computed(() => {
 <template>
   <h1 class="text-xl">学マスの数字を計算するやつ</h1>
 
-  <p class="my-2">最終プロデュース評価 <span class="text-4xl font-bold">{{ idolPower }}</span>pts.</p>
+  <p class="text-sm">中間試験が1位通過ではなかった場合は、評価ポイントがこちらの計算よりも低くなります</p>
+
+  <p class="my-2">最終プロデュース評価<br><span class="text-4xl font-bold">{{ idolPower }}</span>pts.</p>
 
   <label class="form-control">
     <div class="label">
