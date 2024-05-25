@@ -71,14 +71,14 @@ const statusPoint = computed(() => {
 });
 
 const idolPower = computed(() => {
-  return examPlacePoint.value + examScorePoint.value + statusPoint.value;
+  return new Intl.NumberFormat().format(examPlacePoint.value + examScorePoint.value + statusPoint.value);
 });
 </script>
 
 <template>
   <h1 class="text-xl">学マスの数字を計算するやつ</h1>
 
-  <p class="my-2">最終プロデュース評価 <span class="text-4xl">{{ idolPower }}</span>pts.</p>
+  <p class="my-2">最終プロデュース評価 <span class="text-4xl font-bold">{{ idolPower }}</span>pts.</p>
 
   <label class="form-control">
     <div class="label">
