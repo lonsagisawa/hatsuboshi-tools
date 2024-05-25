@@ -1,4 +1,8 @@
 <script setup lang="ts">
+useHead({
+  title: 'Power Calculator - Hatsuboshi Tools'
+})
+
 const examScore = ref<number>(0);
 
 const examPlace = ref(1);

@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import Header from './components/header.vue';
+
+useHead({
+  title: "Hatsuboshi Tools"
+})
 </script>
 
 <template>
