@@ -87,7 +87,8 @@ const idolPowerFormatted = computed(() => {
   <p class="mt-2">最終プロデュース評価</p>
 
   <p>
-    <span v-if="idolPower >= 11500" class="text-4xl font-bold text-rose-500 mr-2">A+</span>
+    <span v-if="idolPower >= 13000" class="text-4xl font-bold text-yellow-500 mr-2">S</span>
+    <span v-else-if="idolPower >= 11500" class="text-4xl font-bold text-rose-500 mr-2">A+</span>
     <span v-else-if="idolPower >= 10000" class="text-4xl font-bold text-rose-500 mr-2">A</span>
     <span v-else-if="idolPower >= 8500" class="text-4xl font-bold text-amber-500 mr-2">B+</span>
 
