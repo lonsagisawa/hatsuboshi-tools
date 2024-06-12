@@ -82,9 +82,11 @@ const idolPowerFormatted = computed(() => {
 <template>
   <h1 class="text-xl font-medium">最終プロデュース評価計算機</h1>
 
-  <p class="text-sm">中間試験が1位通過ではなかった場合は、評価ポイントがこちらの計算よりも低くなります</p>
+  <ul class="text-sm list-disc ml-6 my-2">
+    <li>最終試験終了後の、各ステータスにかかるボーナス(+30)は考慮していません。</li>
+  </ul>
 
-  <p class="mt-2">最終プロデュース評価</p>
+  <p>最終プロデュース評価</p>
 
   <p>
     <span v-if="idolPower >= 13000" class="text-4xl font-bold text-yellow-500 mr-2">S</span>
